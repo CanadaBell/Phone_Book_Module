@@ -25,4 +25,4 @@ if info in book.phonebook:
     os.system('cls' if os.name =='nt' else 'clear')
 else:
     print("sorry wrong key")
-book.outro
+book.outro()
