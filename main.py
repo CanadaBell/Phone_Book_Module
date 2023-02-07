@@ -4,41 +4,14 @@ import time
 import book
 #Variables
 info = None #user input
-logo = ("""
-*****************************
-|                           |
-|  Epic Phonebook Programm  |
-|                           |
-*****************************
-""")
-keys = ("""Please input the key for the info of the person you are trying to access
-
-*************************
-Keys
-↓
-p1: Name: Thomas Kovacs
-p2: "Name: Kent Summers
-p3: "Name: Isaac Blakesley
-p4: "Name: Lucas Arrington
-p5: Name: Lucy Dixon
-*************************""")
-outro = ("""Thank you for using
-
-*****************************
-|                           |
-|  Epic Phonebook Programm  |
-|                           |
-*****************************
-
-please rate 5 ★""")
 #Processing
-print(logo)
-print(keys)
+book.logo()
+book.keys()
 info = input("> ")
-os.system("cls")
+os.system('cls' if os.name =='nt' else 'clear')
 print ("fetching data...")
 time.sleep(3)
-os.system("cls")
+os.system('cls' if os.name =='nt' else 'clear')
 
 if info in book.phonebook:
     print ("""↓ Your requested page ↓
@@ -49,7 +22,7 @@ if info in book.phonebook:
         print(key + ":" , book.phonebook[info][key])
     print ("************************************************************************************************")
     time.sleep(7)
-    os.system("cls")
+    os.system('cls' if os.name =='nt' else 'clear')
 else:
     print("sorry wrong key")
-print (outro)
+book.outro
