@@ -1,8 +1,8 @@
-phonebook = {
-    "p1": {
-        "Name": "Thomas Kovacs",
-        "Phone": "(587)-501-0314",
-        "Address": "14616 31 Street",
+phonebook = { #Main dictionary
+    "p1": { #Sub dictionary 
+        "Name": "Thomas Kovacs",       # \
+        "Phone": "(587)-501-0314",     #  > Parts of Phonebook
+        "Address": "14616 31 Street",  # /
         },
     "p2": {
         "Name": "Kent Summers",
@@ -25,3 +25,36 @@ phonebook = {
         "Address": "7515 118 Ave",
         },
 }
+#functions
+def logo():
+    print("""
+*****************************
+|                           |
+|  Epic Phonebook Programm  |
+|                           |
+*****************************
+""")
+
+def keys(): 
+    print("""Please input the key for the info of the person you are trying to access
+
+*************************
+Keys
+↓
+p1: Name: Thomas Kovacs
+p2: Name: Kent Summers
+p3: Name: Isaac Blakesley
+p4: Name: Lucas Arrington
+p5: Name: Lucy Dixon
+*************************""")
+
+def outro(): 
+    print("""Thank you for using
+
+*****************************
+|                           |
+|  Epic Phonebook Programm  |
+|                           |
+*****************************
+
+please rate 5 ★""")
